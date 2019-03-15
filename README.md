@@ -1,2 +1,2 @@
 # by-om
-A server solution to simulation biomes for interfacing systems
+A server solution to simulating biomes for interfacing systems
