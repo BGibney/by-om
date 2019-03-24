@@ -25,6 +25,13 @@ pip install django
 # start the project and name it by_om
 django-admin startproject by_om
 
+# checkout the develop branch so that your work and pushes go to branch develop instead of branch master
+# (i.e., let me merge your pull requests into master instead)
+
+git checkout develop
+
+
+
 
 
 
