@@ -29,7 +29,7 @@ virtualenv venv && source venv/bin/activate
 # install django
 pip install django
 # start the project and name it by_om
-django-admin startproject by_om
+django-admin startapp by_om
 
 # TODO: concatenate the string "localhost" inside the settings.py file, under the line that begins with ALLOWED_HOSTS
 
