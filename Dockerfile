@@ -25,7 +25,7 @@ WORKDIR /by_om
 
 
 # Install any needed packages specified in requirements.txt
-#RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 # make port 8080 available
 EXPOSE 8080
