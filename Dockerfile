@@ -12,8 +12,8 @@ ENV PYTHONUNBUFFERED 1
 # Unnecessary if your build context is from git?
 #RUN mkdir /by_om
 
-RUN apt-get update \
-    && apt-get install -y git
+RUN sudo apt-get update \
+    && sudo apt-get install -y git
     
 RUN git clone https://github.com/CGibney/by-om/ by_om
 # Set the working directory to /music_service
