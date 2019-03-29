@@ -26,5 +26,5 @@ WORKDIR /by_om
 # make port 8080 available
 EXPOSE 8080
 
-RUN sudo python manage.py migrate
-RUN sudo python manage.py runserver 0.0.0.0:8080
+RUN python manage.py migrate
+RUN python manage.py runserver 0.0.0.0:8080
