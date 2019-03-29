@@ -22,7 +22,7 @@ RUN ls -a
 COPY /by_om /by_om
 # Set the working directory to /by_om
 WORKDIR /by_om
-
+RUN cat models.py
 
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
