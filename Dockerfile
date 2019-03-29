@@ -19,7 +19,7 @@ RUN ls -a
 #RUN git clone https://github.com/CGibney/by-om/ by_om
 
 # Set the working directory to /by_om
-#WORKDIR /by_om
+WORKDIR /by_om
 
 
 # Install any needed packages specified in requirements.txt
@@ -28,5 +28,5 @@ RUN ls -a
 # make port 8080 available
 EXPOSE 8080
 
-RUN python /by_om/manage.py migrate
-RUN python /by_om/manage.py runserver 0.0.0.0:8080
+RUN python manage.py migrate
+RUN python manage.py runserver 0.0.0.0:8080
