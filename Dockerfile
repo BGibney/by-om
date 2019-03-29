@@ -15,14 +15,16 @@ ENV PYTHONUNBUFFERED 1
 # Set the working directory to /music_service
 WORKDIR /by_om
 
-# make port 8080 available
-EXPOSE 8080
+
 
 # Copy the current directory contents into the container at /music_service
 #ADD . /by_om/
 
 # Install any needed packages specified in requirements.txt
 RUN sudo pip install -r requirements.txt
+
+# make port 8080 available
+EXPOSE 8080
 
 RUN sudo python manage.py migrate
 RUN sudo python manage.py runserver 0.0.0.0:8080
