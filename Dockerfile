@@ -19,7 +19,7 @@ RUN ls -a
 #RUN git clone https://github.com/CGibney/by-om/ by_om
 
 
-COPY /by_om
+COPY /by_om /by_om
 # Set the working directory to /by_om
 WORKDIR /by_om
 
