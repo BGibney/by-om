@@ -10,19 +10,16 @@ ENV PYTHONUNBUFFERED 1
 
 # create root directory for our project in the container
 # Unnecessary if your build context is from git?
-#RUN mkdir /by_om
+RUN mkdir /by_om
 
-RUN sudo apt-get update \
-    && sudo apt-get install -y git
+#RUN sudo apt-get update \
+#   && sudo apt-get install -y git
     
-RUN git clone https://github.com/CGibney/by-om/ by_om
-# Set the working directory to /music_service
+#RUN git clone https://github.com/CGibney/by-om/ by_om
+
+# Set the working directory to /by_om
 WORKDIR /by_om
 
-
-
-# Copy the current directory contents into the container at /music_service
-#ADD . /by_om/
 
 # Install any needed packages specified in requirements.txt
 #RUN pip install -r requirements.txt
