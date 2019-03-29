@@ -7,6 +7,7 @@ FROM python:3.7-alpine
 # The enviroment variable ensures that the python output is set straight
 # to the terminal with out buffering it first
 ENV PYTHONUNBUFFERED 1
+RUN ls -a
 
 # create root directory for our project in the container
 # Unnecessary if your build context is from git?
