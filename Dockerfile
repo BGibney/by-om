@@ -4,7 +4,7 @@
 # We Use an official Python runtime as a parent image
 # deprecated as it doesn't work on Pi? To be confirmed
 #FROM python:3.7-alpine
-FROM arm32v7:3.7-alpine
+FROM arm32v7/python:3.7-alpine
 
 # The enviroment variable ensures that the python output is set straight
 # to the terminal with out buffering it first
