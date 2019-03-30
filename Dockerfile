@@ -23,4 +23,6 @@ EXPOSE 8080
 
 RUN python manage.py migrate
 
+RUN echo "Test from within the container"
+
 #RUN python manage.py runserver 0.0.0.0:8080
