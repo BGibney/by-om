@@ -11,7 +11,7 @@ FROM arm32v6/python:3.7-alpine
 ENV PYTHONUNBUFFERED 1
 
 # Copy the project repo to inside the container
-COPY /byom_app /by_om
+COPY /byom_cbv /by_om
 # Set the working directory to /by_om
 WORKDIR /by_om
 
