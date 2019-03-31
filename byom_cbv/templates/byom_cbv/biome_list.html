@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2><a href="{% url 'byom_cbv:biome_list' %}">Byom CBV</a></h2>
+
+<ul>
+    {% for biome in object_list %}
+    <li>{{ biome.BIOME_NAME }}  ({{ biome.SOIL_PH_MIN }} Soil MIN ) ({{ biome.SOIL_PH_MAX }} Soil MAX )
+    <a href="{% url 'byom_cbv:biome_edit' biome.id %}">edit</a>
+    <a href="{% url 'byom_cbv:biome_delete' biome.id %}">delete</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'byom_cbv:biome_new' %}">New</a>
+
+{% endblock %}
