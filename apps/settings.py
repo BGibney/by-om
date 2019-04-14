@@ -26,7 +26,7 @@ SECRET_KEY = '0ux_%=7!81&z=^uj5iw@tue#7zkfn9lk)=*d147(g+$5t$l9nz'
 DEBUG = True
 
 # credit goes to https://stackoverflow.com/a/45288019 for ip solution
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 ALLOWED_HOSTS += ['172.17.{}.{}'.format(i,j) for i in range(256) for j in range(256)]
 ALLOWED_HOSTS += ['192.168.{}.{}'.format(i,j) for i in range(256) for j in range(256)]
 
