@@ -6,3 +6,6 @@ Heavily adapted and inspired from https://github.com/rayed/django_crud
 
 
 
+
+
+
