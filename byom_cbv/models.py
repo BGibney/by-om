@@ -6,6 +6,30 @@ class Biome(models.Model):
     BIOME_NAME = models.CharField(max_length=200)
     SOIL_PH_MIN = models.FloatField()
     SOIL_PH_MAX = models.FloatField()	
+    TEMP_MIN = models.FloatField()
+    TEMP_MAX = models.FloatField()
+    PRECIP_MIN = models.FloatField()
+    PRECIP_MAX = models.FloatField()
+    CROP = models.ManyToManyField(Crop)
+
+
+class Crop(models.Model):
+    CROP_NAME = models.CharField(max_length=200)
+    AVG_SOIL_PH = models.FloatField()
+    AVG_GROW_TEMP = models.FloatField()
+    AVG_PRECIP = models.FloatField()
+
+class User(models.Model):
+    NAME = models.CharField(max_length=200)
+    #PASSWORD = models.CharField(max_length=300)
+    # No authentication should be used for now - we shouldn't "roll our own" solution.
+
+
+ class Bookmark(models.Model):
+       BOOKMARK_DATE = models.DateField()
+       crop = models.ForeignKey(Crop, on_delete=models.CASCADE)
+       user = models.ForeignKey(User, on_delete=models.CASCADE)
+
 
     def __str__(self):
         return self.BIOME_NAME
