@@ -2,6 +2,12 @@ from django.db import models
 from django.urls import reverse
 
 
+class Crop(models.Model):
+    CROP_NAME = models.CharField(max_length=200)
+    AVG_SOIL_PH = models.FloatField()
+    AVG_GROW_TEMP = models.FloatField()
+    AVG_PRECIP = models.FloatField()
+
 class Biome(models.Model):
     BIOME_NAME = models.CharField(max_length=200)
     SOIL_PH_MIN = models.FloatField()
@@ -13,11 +19,7 @@ class Biome(models.Model):
     CROP = models.ManyToManyField(Crop)
 
 
-class Crop(models.Model):
-    CROP_NAME = models.CharField(max_length=200)
-    AVG_SOIL_PH = models.FloatField()
-    AVG_GROW_TEMP = models.FloatField()
-    AVG_PRECIP = models.FloatField()
+
 
 class User(models.Model):
     NAME = models.CharField(max_length=200)
