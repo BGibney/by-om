@@ -27,9 +27,9 @@ class User(models.Model):
 
     # fixed indentation issue
 class Bookmark(models.Model):
-   BOOKMARK_DATE = models.DateField()
-   crop = models.ForeignKey(Crop, on_delete=models.CASCADE)
-   user = models.ForeignKey(User, on_delete=models.CASCADE)
+    BOOKMARK_DATE = models.DateField()
+    crop = models.ForeignKey(Crop, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
     def __str__(self):
